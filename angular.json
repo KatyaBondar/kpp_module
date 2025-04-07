@@ -38,7 +38,7 @@
             "styles": ["src/global.scss", "src/theme/variables.scss"],
             "scripts": [],
             "browser": "src/main.ts",
-            "baseHref": "/kpp_module/"
+            "baseHref": "https://katyabondar.github.io/kpp_module/kpp_module/"
           },
           "configurations": {
             "production": {
