@@ -1,0 +1,18 @@
+<ion-item>
+  <ion-textarea
+    [formControl]="textControl"
+    label="Enter the text"
+    labelPlacement="floating"
+    placeholder="text...">
+  </ion-textarea>
+</ion-item>
+<ion-button expand="full" color="primary" (click)="saveVersion()">
+  Save version
+</ion-button>
+<ion-alert
+  *ngIf="showAlert"
+  [isOpen]="showAlert"
+  [message]="alertMessage"
+  buttons="OK"
+  (ionAlertDidDismiss)="showAlert = false">
+</ion-alert>

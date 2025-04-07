@@ -1,0 +1,21 @@
+<ion-header [translucent]="true" class="editor-header">
+  <ion-toolbar>
+    <ion-title>Text editor</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <app-text-editor
+    [initialText]="currentText"
+    (textChanged)="onTextChanged($event)">
+  </app-text-editor>
+
+  <ion-list class="version-list">
+    <ion-item
+      *ngFor="let version of history; let i = index"
+      button
+      (click)="restoreVersion(i)"
+      class="version-item">
+      Version {{ i + 1 }}: {{ version.substring(0, 200) }}...
+    </ion-item>
+  </ion-list>
+</ion-content>
